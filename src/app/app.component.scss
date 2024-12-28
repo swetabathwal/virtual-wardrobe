@@ -1,0 +1,15 @@
+.cover-image {
+    background-image: url('../../assests/try-on-fashion-clothes-concept-vector-illustration-cartoon-beautiful-fashionable-woman-character-trying-on-trendy-dress-in-front-of-mirror-in-home-wardrobe-after-shopping-choose-outfit-background-2DCHWE9.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;   /* Full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
