@@ -1,0 +1,48 @@
+<div class="cover-image">
+    <div class="auth-container">
+        <div class="auth-card" [@slideAnimation]="isLogin ? 'login' : 'signup'">
+          <div class="form-header">
+            <h2 *ngIf="isLogin">Login</h2>
+            <h2 *ngIf="!isLogin">Sign Up</h2>
+          </div>
+      
+          <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+            <ng-container *ngIf="!isLogin">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName" required />
+              </mat-form-field>
+    
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName" required />
+              </mat-form-field>
+    
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="tel" formControlName="phoneNumber" required />
+              </mat-form-field>
+            </ng-container>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Username/Mail Id</mat-label>
+              <input matInput formControlName="username" required />
+            </mat-form-field>
+          
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password" required />
+            </mat-form-field>
+          
+            <button mat-raised-button color="primary" class="auth-button">
+              {{ isLogin ? 'Login' : 'Sign Up' }}
+            </button>
+          </form>
+      
+          <p class="toggle-text">
+            {{ isLogin ? "Don't have an account?" : 'Already have an account?' }}
+            <a (click)="toggleAuthMode()">{{ isLogin ? 'Sign Up' : 'Login' }}</a>
+          </p>
+        </div>
+      </div>
+      
+</div>

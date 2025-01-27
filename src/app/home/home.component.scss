@@ -1,0 +1,102 @@
+.cover-image {
+    background-image: url('../../assets/pexels-bohlemedia-1884584.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;   /* Full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background: linear-gradient(135deg, #6b73ff, #000dff);
+    overflow: hidden;
+  }
+  
+  .auth-card {
+    border-style: groove;
+    width: 350px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(0);
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .auth-button {
+    background-color: black !important;
+    display: block;
+    width: 100%; /* Make the button full-width */
+    margin-top: 16px; /* Add some spacing */
+    color: white; /* Ensure text color is visible */
+  }
+  
+  .toggle-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .toggle-text a {
+    color: #000dff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  mat-label{
+    color: black;
+  }
+
+  ::ng-deep .form-field{
+    .mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after{
+        color: red;
+      }
+  }
+
+  .form-field {
+    mat-label {
+      color: black; // Ensure label text is black
+    }
+  
+    input {
+      color: black; // Change input text color to black
+    }
+  
+    mat-form-field {
+      .mat-form-field-outline {
+        border-color: black; // Change outline border color to black
+      }
+      &:focus {
+        .mat-form-field-outline {
+          border-color: black; // Change border color when focused
+        }
+      }
+    }
+  }
+  
+
+
