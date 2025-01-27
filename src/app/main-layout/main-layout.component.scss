@@ -1,0 +1,29 @@
+.main-layout {
+    display: flex;
+    height: 100vh; /* Full height */
+  }
+  
+  .mat-drawer-container {
+    flex: 1;
+    display: flex;
+  }
+  
+  .mat-drawer {
+    width: 250px; /* Adjust the drawer width as needed */
+    height: 100%;
+  }
+  
+  .mat-drawer-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .nav-menu {
+    padding: 20px;
+  }
+  
+  mat-nav-list a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

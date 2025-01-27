@@ -1,1 +1,34 @@
-<p>upload works!</p>
+<div class="upload-container">
+    <div 
+        class="drop-zone" 
+        (dragover)="onDragOver($event)" 
+        (drop)="onDrop($event)" 
+        (dragleave)="onDragLeave($event)">
+      <div class="upload-content">
+        <mat-icon class="upload-icon">upload</mat-icon>
+        <p>Drag & Drop your image here, or</p>
+        <button mat-raised-button color="primary" (click)="fileInput.click()">
+          Browse
+        </button>
+        <input 
+          #fileInput 
+          type="file" 
+          (change)="onFileSelected($event)" 
+          accept="image/*" 
+          hidden 
+          multiple />
+      </div>
+    </div>
+    <div>{{uploadedImages}}</div>
+    <div class="preview-section" *ngIf="uploadedImages.length">
+      <h3>Preview</h3>
+      <div class="image-preview" *ngFor="let image of uploadedImages; let i = index">
+        <img [src]="image" alt="Uploaded Image" />
+        <button mat-icon-button color="warn" (click)="removeImage(i)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <button mat-raised-button (click)="openImageModal()">Select Styling</button>
+    </div>
+  </div>
+  

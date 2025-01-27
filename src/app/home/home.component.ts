@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -30,7 +31,7 @@ export class HomeComponent {
   authForm: FormGroup;
   animating = false; // Prevents animation overlap
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router : Router) {
     this.authForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
@@ -67,6 +68,7 @@ export class HomeComponent {
   }
 
   onSubmit() {
+    this.router.navigate(['/app']);
     console.log("submt")
     if (this.authForm.valid) {
       console.log(this.isLogin ? 'Logging in...' : 'Signing up...', this.authForm.value);

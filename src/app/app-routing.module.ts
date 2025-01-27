@@ -5,9 +5,10 @@ import { CategoriesComponent } from './categories/categories.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { SettingsComponent } from './settings/settings.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'app', component: MainLayoutComponent,
     children:[
       { path: 'upload', component: UploadComponent },

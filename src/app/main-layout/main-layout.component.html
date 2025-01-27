@@ -1,1 +1,17 @@
-<p>main-layout works!</p>
+<mat-drawer-container class="main-layout">
+    <mat-drawer mode="side" opened>
+      <div class="nav-menu">
+        <h3>Virtual Wardrobe</h3>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/app/upload">Image Upload</a>
+          <a mat-list-item routerLink="/app/categories">Categories</a>
+          <a mat-list-item routerLink="/app/calendar">Calendar</a>
+          <a mat-list-item routerLink="/app/settings">Settings</a>
+        </mat-nav-list>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
